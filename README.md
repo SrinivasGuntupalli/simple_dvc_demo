@@ -69,6 +69,14 @@ Step16: git branch -M main
 Step17: git push origin main
 ```
 ```bash
+update params.yaml file
+Step: git add . && git commit -m "params added"
+```
+```bash
+step: touch src/get_data.py
+write code to bring data
+```
+```bash
 Step18: tox command -
 ```
 ```bash

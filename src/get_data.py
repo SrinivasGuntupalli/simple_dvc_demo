@@ -1,0 +1,32 @@
+## read params
+## process
+## return dataframe
+import os
+import yaml
+import pandas as pd
+import argparse
+
+#read the params from the config path and it will return a dictionary(yaml file)
+def read_params(config_path):
+    with open(config_path) as yaml_file:
+        config = yaml.safe_load(yaml_file)
+    return config
+
+#This function will get the data 
+def get_data(config_path):
+    #read the params from configaration file from the configaration path
+    config = read_params(config_path) #here calling the above method read_params()
+    #print(config)
+    #
+    data_path = config["data_source"]["s3_source"]
+    df = pd.read_csv(data_path, sep=",", encoding='utf-8')
+    #print(df.head())
+    return df  #here we are returning df and this df value will go and assign to a data in the below main method
+
+
+
+if __name__=="__main__":
+    args = argparse.ArgumentParser()
+    args.add_argument("--config", default="params.yaml")
+    parsed_args = args.parse_args()
+    data = get_data(config_path=parsed_args.config)
