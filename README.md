@@ -252,7 +252,16 @@ write the ci-cd code here
 Step: git add . && git commit -m "Github action workflow added"
 git push origin main
 ```
+```bash
+entrypoint for app
+$ touch Procfile
+specify the server name
+```
 
+```bash
+Step: git add . && git commit -m "workflow updated"
+git push origin main
+```
 
 
 
