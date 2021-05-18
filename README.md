@@ -76,6 +76,21 @@ Step: git add . && git commit -m "params added"
 step: touch src/get_data.py
 write code to bring data
 ```
+
+```bash
+Step: git add . && git commit -m "add get_data"
+```
+```bash
+Step: touch src/load_data.py
+write code 
+```
+```bash
+Step: git add . && git commit -m "add get_data"
+```
+
+
+
+
 ```bash
 Step18: tox command -
 ```
