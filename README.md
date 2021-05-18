@@ -71,6 +71,7 @@ Step17: git push origin main
 ```bash
 update params.yaml file
 Step: git add . && git commit -m "params added"
+git push origin main
 ```
 ```bash
 step: touch src/get_data.py
@@ -79,6 +80,7 @@ write code to bring data
 
 ```bash
 Step: git add . && git commit -m "add get_data"
+git push origin main
 ```
 ```bash
 Step: touch src/load_data.py
@@ -86,7 +88,40 @@ write code
 ```
 ```bash
 Step: git add . && git commit -m "add get_data"
+git push origin main
 ```
+```bash
+Step: python src/load_data.py
+```
+```bash
+write code in dvc.yaml file for load_data and save the file and run the dvc file
+Step: dvc repro
+```
+```bash
+Step: git add . && git commit -m "stage 1 complete"
+git push origin main
+```
+```bash
+spliting file to split the data
+Step: touch src/split_data.py
+```
+```bash
+write code in dvc.yaml file for split_data and save the file and run the dvc file
+Step: dvc repro
+```
+```bash
+Step: git add . && git commit -m "stage 1 complete"
+git push origin main
+```
+```bash
+Step: touch train_and_evaluate.py
+write the code
+```
+```bash
+write code in dvc.yaml file for rain_and_evaluate and save the file and run the dvc file
+Step: dvc repro
+
+
 
 
 
