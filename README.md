@@ -147,39 +147,120 @@ now check the scores and params json files
 $ dvc metrics show
 $ dvc metrics diff
 ```
-
-
-
-
-
-
-
-
-
-
 ```bash
-Step18: tox command -
+creating the virtual test environments using [tox], it will help us to test our models in virtual environments with higher or lower versions Python versions.
+
+step: touch tox.ini
+write the code here
 ```
 ```bash
-tox
-for rebuilding -
+step: mkdir tests
+touch tests/conftest.py touch tests/test_config.py
+touch tests/__init__.py
+```
+
+```bash
+Step:touch setup.py
+write code here
+```
+
+```bash
+Step: tox
+this will create the test environment
 ```
 ```bash
-tox -r 
+Step: pytest -v
+pip install -e .
+
+pip freeze
+this will tell you waht are all packages are installed in your current working directory.
+
+
+```bash
+tox command -
+$ tox
+```
+
+```bash
+tox for rebuilding -
+$ tox -r
+```
+```bash
 pytest command
+$ pytest -v
 ```
-```bash
-pytest -v
-```
+
 ```bash
 setup commands -
-```
-```bash
 pip install -e . 
 ```
+
 ```bash
 build your own package commands-
-
-python setup.py sdist bdist_wheel
+$ python setup.py sdist bdist_wheel
 
 ```
+```bash
+Step: git add . && git commit -m "Set up is done"
+git push origin main
+```
+
+```bash
+you can install Jupyter notebook if you want
+$ pip install jupyterlab
+after installing it will display one link and it may look like this pyzmq-22.0.3
+click on it, and $ prompt will come
+
+$ jupyter-lab notebooks/
+```
+
+```bash
+mkdir -p prediction_service/model
+mkdir webapp
+touch app.py
+touch prediction_service/__init__.py
+touch prediction_service/prediction.py
+mkdir -p webapp/static/css
+mkdir -p webapp/static/script
+touch webapp/static/css/main.css
+touch webapp/static/sctipt/index.js
+mkdir webapp/templates
+touch webapp/templates/index.html
+touch webapp/templates/404.html
+touch webapp/templates/base.html
+
+add ll the codes in these files
+```
+
+```bash
+Step: git add . && git commit -m "Added web stcture"
+git push origin main
+```
+
+```bash
+now build the FLASK api, for that we need to write a code in app.py file
+```
+
+```bash
+now we need to implement the workflow which is call CI/CD
+$ mkdir -p .github/workflow
+$ touch .github/workflow/ci-cd.yaml
+
+write the ci-cd code here
+```
+```bash
+Step: git add . && git commit -m "Github action workflow added"
+git push origin main
+```
+
+
+
+
+
+
+
+
+
+
+
+
