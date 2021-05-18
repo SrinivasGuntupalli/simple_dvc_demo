@@ -114,12 +114,43 @@ Step: git add . && git commit -m "stage 1 complete"
 git push origin main
 ```
 ```bash
-Step: touch train_and_evaluate.py
+Step: touch src/train_and_evaluate.py
 write the code
 ```
 ```bash
 write code in dvc.yaml file for rain_and_evaluate and save the file and run the dvc file
 Step: dvc repro
+```
+```bash
+step: mkdir report
+touch report/params.json
+touch report/scores.json
+```
+```bash
+Step: python src/train_and_evaluate.py
+now model store the param values and metric scores in reports/param and scores file.
+```
+```bash
+Step: dvc repro
+dvc metrics show
+dvc metrics diff
+```
+```bash
+Step: git add . && git commit -m "Tracker Added"
+git push origin main
+```
+
+```bash
+Step: goto Params file and change the param values at estimators: section and save it and run the model
+$ dvc repro
+now check the scores and params json files
+$ dvc metrics show
+$ dvc metrics diff
+```
+
+
+
+
 
 
 
