@@ -263,7 +263,18 @@ Step: git add . && git commit -m "workflow updated"
 git push origin main
 ```
 
+```bash
+TO RUN AND TEST THE APP, RUN THIS FILE AND TAKE THE Localhost link and paste it in a browser.
 
+STEP: PYTHON APP.PY
+```
+
+```bash
+
+FINALLY WE HAVE SPECIFY OR MOVE THE WEBAPP DIRECTORY AND MOVE THE SAVED MODEL INTO MODEL DIRECTORY
+
+STEP: cp saved_models/model.joblib prediction_service/model/
+```
 
 
 
