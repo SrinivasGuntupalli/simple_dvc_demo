@@ -220,6 +220,7 @@ mkdir webapp
 touch app.py
 touch prediction_service/__init__.py
 touch prediction_service/prediction.py
+touch prediction_service/schema_in.json
 mkdir -p webapp/static/css
 mkdir -p webapp/static/script
 touch webapp/static/css/main.css
@@ -249,8 +250,7 @@ $ touch .github/workflow/ci-cd.yaml
 write the ci-cd code here
 ```
 ```bash
-Step: git add . && git commit -m "Github action workflow added"
-git push origin main
+Step: git add . && git commit -m "Github action workflow added" && git push origin main
 ```
 ```bash
 entrypoint for app
